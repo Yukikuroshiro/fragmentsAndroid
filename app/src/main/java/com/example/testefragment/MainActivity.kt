@@ -9,8 +9,12 @@ import com.example.testefragment.fragments.ConsolesFragment
 import com.example.testefragment.fragments.GamesFragment
 import com.example.testefragment.fragments.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(),
+    View.OnClickListener,
+    BottomNavigationView.OnNavigationItemSelectedListener,
+    NavigationView.OnNavigationItemSelectedListener {
     private lateinit var buttonHome: Button
     private lateinit var buttonConsoles: Button
     private lateinit var buttonGames: Button
@@ -21,18 +25,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BottomNavigation
 
     private lateinit var bottomNavigation: BottomNavigationView
 
+    private lateinit var navigationView: NavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.drawer_navigation_layout)
 
-        buttonHome = findViewById(R.id.button_home)
-        buttonHome.setOnClickListener(this)
-
-        buttonConsoles = findViewById(R.id.button_consoles)
-        buttonConsoles.setOnClickListener(this)
-
-        buttonGames = findViewById(R.id.button_games)
-        buttonGames.setOnClickListener(this)
+//        buttonHome = findViewById(R.id.button_home)
+//        buttonHome.setOnClickListener(this)
+//
+//        buttonConsoles = findViewById(R.id.button_consoles)
+//        buttonConsoles.setOnClickListener(this)
+//
+//        buttonGames = findViewById(R.id.button_games)
+//        buttonGames.setOnClickListener(this)
 
         homeFragment = HomeFragment()
         gamesFragment = GamesFragment()
@@ -41,22 +47,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BottomNavigation
         bottomNavigation = findViewById(R.id.bottom_navigation)
         bottomNavigation.setOnNavigationItemSelectedListener(this)
 
+        navigationView = findViewById(R.id.navigation_view)
+        navigationView.setNavigationItemSelectedListener(this)
+
         supportFragmentManager.beginTransaction().replace(R.id.frame, homeFragment).commit()
 
     }
 
     override fun onClick(v: View) {
-        when (v.id){
-            R.id.button_home -> {
-                supportFragmentManager.beginTransaction().replace(R.id.frame, homeFragment).commit()
-            }
-            R.id.button_consoles -> {
-                supportFragmentManager.beginTransaction().replace(R.id.frame, consolesFragment).commit()
-            }
-            R.id.button_games -> {
-                supportFragmentManager.beginTransaction().replace(R.id.frame, gamesFragment).commit()
-            }
-        }
+//        when (v.id){
+//            R.id.button_home -> {
+//                supportFragmentManager.beginTransaction().replace(R.id.frame, homeFragment).commit()
+//            }
+//            R.id.button_consoles -> {
+//                supportFragmentManager.beginTransaction().replace(R.id.frame, consolesFragment).commit()
+//            }
+//            R.id.button_games -> {
+//                supportFragmentManager.beginTransaction().replace(R.id.frame, gamesFragment).commit()
+//            }
+//        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
