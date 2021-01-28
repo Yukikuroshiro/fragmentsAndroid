@@ -30,26 +30,32 @@
             android:text="Persona 5 Royal"
             app:layout_constraintTop_toBottomOf="@id/image_game"
             app:layout_constraintStart_toStartOf="parent"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginStart="8dp"
+            android:layout_margin="8dp"/>
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chip_group_consoles"
             app:layout_constraintTop_toBottomOf="@id/text_view_game_name"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp">
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Playstation 4"
-                android:theme="@style/Theme.MaterialComponents.Light"/>
+            <!-- Os chips são inseridos via programação -->
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Playstation 5"
-                android:theme="@style/Theme.MaterialComponents.Light"/>
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Playstation 4"-->
+<!--                android:theme="@style/Theme.MaterialComponents.Light"/>-->
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Playstation 5"-->
+<!--                android:theme="@style/Theme.MaterialComponents.Light"/>-->
 
         </com.google.android.material.chip.ChipGroup>
 
@@ -59,14 +65,19 @@
             android:layout_height="wrap_content"
             android:text="Persona 5 Royal é um jogo eletrônico de RPG desenvolvido pela Atlus. O jogo é cronologicamente a sexta edição da série Persona, que faz parte principalmente da franquia Megami Tensei. "
             app:layout_constraintTop_toBottomOf="@id/chip_group_consoles"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"/>
 
         <RatingBar
+            android:id="@+id/rating_bar_game"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/text_view_description"
             app:layout_constraintStart_toStartOf="parent"
             style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_marginStart="8dp"
             android:numStars="5"
             android:rating="4.5"
             android:stepSize="0.5"
