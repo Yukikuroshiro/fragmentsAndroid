@@ -27,14 +27,14 @@ class GameViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         ratingBarGame.rating = game.gameRating
         imageGame.setImageDrawable(game.gameImage)
 
-        for ( console in game.consoles ){
-            val chip = Chip(
-                ContextThemeWrapper(itemView.context, R.style.ChipTextAppearance),
-                null,
-                0
-            )
-            chip.text = console.consoleName
-            chipGroupConsoles.addView(chip)
-        }
+//        for ( console in game.consoles ){
+//            val chip = Chip(
+//                ContextThemeWrapper(itemView.context, R.style.ChipTextAppearance),
+//                null,
+//                0
+//            )
+//            chip.text = console.consoleName
+//            chipGroupConsoles.addView(chip)
+//        }
     }
 }

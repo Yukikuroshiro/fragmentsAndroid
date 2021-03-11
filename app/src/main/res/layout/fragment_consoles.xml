@@ -11,4 +11,15 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/holder_console_layout"/>
 
+    <ImageButton
+        android:id="@+id/add_console_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_baseline_add_24"
+        android:drawableTint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_button"/>
+
 </RelativeLayout>

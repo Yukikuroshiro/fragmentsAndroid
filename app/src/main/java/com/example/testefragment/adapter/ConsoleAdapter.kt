@@ -8,6 +8,7 @@ import com.example.testefragment.holder.ConsoleViewHolder
 import com.example.testefragment.model.Console
 
 class ConsoleAdapter: RecyclerView.Adapter<ConsoleViewHolder>() {
+
     private var consoleList = listOf<Console>()
 
     fun updateConsoleList(list: List<Console>){
